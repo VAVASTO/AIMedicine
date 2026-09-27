@@ -1,0 +1,55 @@
+{
+  "mode": "offline",
+  "source_version": "654_2 / 2024",
+  "cases": [
+    {
+      "patient_id": "patient_001",
+      "path": "patient_001.json",
+      "initial_drugs": [
+        "ampicillin"
+      ],
+      "final_drugs": [
+        "ampicillin"
+      ],
+      "findings": 0,
+      "open_findings": 0,
+      "unverified_llm_findings": 0,
+      "requires_human_review": false,
+      "revision_triggered": false
+    },
+    {
+      "patient_id": "patient_002",
+      "path": "patient_002.json",
+      "initial_drugs": [
+        "levofloxacin"
+      ],
+      "final_drugs": [
+        "levofloxacin"
+      ],
+      "findings": 0,
+      "open_findings": 0,
+      "unverified_llm_findings": 0,
+      "requires_human_review": false,
+      "revision_triggered": false
+    },
+    {
+      "patient_id": "patient_003",
+      "path": "patient_003.json",
+      "initial_drugs": [
+        "ampicillin"
+      ],
+      "final_drugs": [
+        "amoxiclav"
+      ],
+      "findings": 0,
+      "open_findings": 0,
+      "unverified_llm_findings": 0,
+      "requires_human_review": false,
+      "revision_triggered": true
+    }
+  ],
+  "usage": {
+    "api_attempts": 0
+  },
+  "note": "Синтетический учебный прототип; source edition frozen, not asserted latest."
+}

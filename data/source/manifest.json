@@ -1,0 +1,27 @@
+{
+  "document_id": "ru-cap-654_2-2024",
+  "title": "Внебольничная пневмония у взрослых",
+  "version": "2024",
+  "guideline_id": "654_2",
+  "source_url": "https://spulmo.ru/upload/KR-vnebolnichnaya-pnevmoniya-u-vzroslyh-2024.pdf",
+  "source_file": "data/source/cap_2024.pdf",
+  "retrieved_at": "2026-09-27",
+  "page_count": 73,
+  "sha256": "281a08c3b34c5f3b120bacd7e5fabc9ed42d8ac101efcfb26446cfafa45d5e78",
+  "extracted_pages_sha256": "6964cada3a518ce43d39766c4821dc839119801fe10ef6ad48acab146a035607",
+  "parser": {
+    "name": "pypdf",
+    "version": "6.10.0",
+    "method": "PdfReader.pages[n].extract_text()"
+  },
+  "chunk_count": 33,
+  "page_numbering": "Physical PDF page, one-based; not an invented recommendation number.",
+  "scope": "Selected exact excerpts for adult nonsevere inpatient community-acquired pneumonia; three educational synthetic scenarios, not full guideline coverage.",
+  "dose_scope": "The dose table explicitly applies only to normal liver and kidney function.",
+  "source_quality": "Raw extracted excerpts preserve PDF word-concatenation and displaced sub/superscripts. Original PDF is authoritative. Key allergy table p25 and dose table p64 visually checked against rendered pages.",
+  "limitations": [
+    "The guideline states review no later than 2026; this project pins the supplied 2024 edition and does not assert it remains the latest guideline.",
+    "Chunk titles and tags are retrieval metadata. Only text is a verbatim excerpt.",
+    "Drug-drug interaction labels and assignment-only procedure policies must have separate provenance."
+  ]
+}

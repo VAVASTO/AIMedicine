@@ -1,0 +1,268 @@
+[
+  {
+    "id": "ampicillin_iv",
+    "title": "Ампициллин",
+    "category": "medication",
+    "drug_id": "ampicillin",
+    "dose": "2,0 г",
+    "route": "в/в",
+    "frequency": "каждые 6 ч",
+    "evidence_ids": [
+      "cap-empiric",
+      "cap-parenteral",
+      "cap-beta-allergy",
+      "cap-dose-ampicillin",
+      "cap-dose-scope"
+    ],
+    "requirements": [
+      "adult",
+      "nonsevere_inpatient",
+      "normal_renal_function",
+      "normal_hepatic_function",
+      "no_immediate_beta_lactam_allergy",
+      "no_mdr_risk"
+    ],
+    "description": "Стартовый вариант нетяжёлой ВП без значимых сопутствующих заболеваний и факторов риска редких/полирезистентных возбудителей. Исключить немедленную аллергию на бета-лактамы. Доза из таблицы для нормальной функции печени и почек; схема не покрывает коррекцию при органной недостаточности.",
+    "supportive_evidence_ids": [
+      "cap-inpatient-table",
+      "cap-beta-allergy"
+    ]
+  },
+  {
+    "id": "amoxiclav_iv",
+    "title": "Амоксициллин + клавулановая кислота",
+    "category": "medication",
+    "drug_id": "amoxiclav",
+    "dose": "1,2 г",
+    "route": "в/в",
+    "frequency": "каждые 8 ч",
+    "evidence_ids": [
+      "cap-empiric",
+      "cap-parenteral",
+      "cap-dose-amoxiclav",
+      "cap-dose-scope"
+    ],
+    "requirements": [
+      "adult",
+      "nonsevere_inpatient",
+      "normal_renal_function",
+      "normal_hepatic_function",
+      "no_immediate_beta_lactam_allergy"
+    ],
+    "description": "Препарат первой линии при нетяжёлой ВП. При этиотропном выборе требуется документированная чувствительность выделенного клинически значимого возбудителя; учитывать качество посева и клиническую картину. Выбран интервал 8 ч из указанного в источнике диапазона 6–8 ч. 1,2 г — общая доза комбинации из таблицы.",
+    "supportive_evidence_ids": [
+      "cap-etiotropic",
+      "cap-culture-review",
+      "cap-amoxiclav-haemophilus",
+      "cap-inpatient-table",
+      "cap-beta-allergy"
+    ]
+  },
+  {
+    "id": "levofloxacin_iv",
+    "title": "Левофлоксацин",
+    "category": "medication",
+    "drug_id": "levofloxacin",
+    "dose": "0,5 г",
+    "route": "в/в",
+    "frequency": "каждые 12 ч",
+    "evidence_ids": [
+      "cap-beta-allergy",
+      "cap-inpatient-table",
+      "cap-fluoroquinolones",
+      "cap-ecg",
+      "cap-qt",
+      "cap-dose-levofloxacin",
+      "cap-dose-scope"
+    ],
+    "requirements": [
+      "adult",
+      "nonsevere_inpatient",
+      "normal_renal_function",
+      "normal_hepatic_function",
+      "no_fluoroquinolone_allergy",
+      "no_qt_risk"
+    ],
+    "description": "Альтернатива при невозможности назначить пенициллины, включая немедленную аллергию на бета-лактамы, если нет собственных противопоказаний и лекарственных конфликтов. Проверить функцию почек, ЭКГ, QTc и сопутствующие препараты. В этой таблице 0,75 г каждые 24 ч относится только к приёму внутрь; внутривенно выбрана явно указанная схема 0,5 г каждые 12 ч.",
+    "supportive_evidence_ids": [
+      "cap-inpatient-table",
+      "cap-beta-allergy"
+    ]
+  },
+  {
+    "id": "cbc",
+    "title": "Общий (клинический) анализ крови",
+    "category": "investigation",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-cbc"
+    ],
+    "requirements": [],
+    "description": "Эритроциты, гематокрит, лейкоциты, тромбоциты, лейкоцитарная формула; не считать назначение полученным результатом."
+  },
+  {
+    "id": "biochemistry",
+    "title": "Биохимический анализ крови",
+    "category": "investigation",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-biochemistry"
+    ],
+    "requirements": [],
+    "description": "Мочевина, креатинин, билирубин, глюкоза, альбумин, натрий, калий, хлориды, АСТ и АЛТ. Учитывать результаты при выборе препарата и дозы."
+  },
+  {
+    "id": "crp",
+    "title": "С-реактивный белок",
+    "category": "investigation",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-crp",
+      "cap-crp-dynamics"
+    ],
+    "requirements": [],
+    "description": "Исходная оценка и повторная оценка на 3–4 день; динамика СРБ рассматривается вместе с клинической картиной."
+  },
+  {
+    "id": "ecg",
+    "title": "ЭКГ в стандартных отведениях",
+    "category": "investigation",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-ecg"
+    ],
+    "requirements": [],
+    "description": "Для выявления осложнений, сопутствующих заболеваний и безопасного выбора антибиотика; при неизвестном QTc нельзя выдумывать нормальный результат."
+  },
+  {
+    "id": "sputum_culture",
+    "title": "Микроскопия и посев мокроты с чувствительностью",
+    "category": "investigation",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-sputum-culture",
+      "cap-sputum-before-antibiotics",
+      "cap-culture-interpretation"
+    ],
+    "requirements": [],
+    "description": "При продуктивном кашле получить образец как можно раньше и до АБТ. Оценивать качество образца, микроскопию и клиническую значимость результата; не подменять назначение полученным посевом."
+  },
+  {
+    "id": "chest_xray",
+    "title": "Рентгенография органов грудной клетки",
+    "category": "investigation",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-chest-xray"
+    ],
+    "requirements": [],
+    "description": "Для верификации диагноза, оценки распространённости и осложнений. При уже полученном подтверждающем снимке повторный снимок автоматически не назначается."
+  },
+  {
+    "id": "pulse_oximetry",
+    "title": "Пульсоксиметрия",
+    "category": "monitoring",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-pulse-oximetry"
+    ],
+    "requirements": [],
+    "description": "Измерить SpO2 для выявления гипоксемии; не придумывать частоту измерений, не указанную в данном фрагменте."
+  },
+  {
+    "id": "vitals",
+    "title": "Контроль жизненных показателей",
+    "category": "monitoring",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-vitals"
+    ],
+    "requirements": [],
+    "description": "Температура, ЧДД, ЧСС и артериальное давление; оценка вместе с состоянием сознания и жалобами."
+  },
+  {
+    "id": "hydration",
+    "title": "Достаточное питьё и ограничение чрезмерной нагрузки",
+    "category": "regimen",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-hydration"
+    ],
+    "requirements": [],
+    "description": "Общая рекомендация из информации для пациента; источник не устанавливает объём жидкости. Индивидуальный объём и ограничения определяет врач с учётом состояния; внутривенные инфузии автоматически не назначаются."
+  },
+  {
+    "id": "reassess_72h",
+    "title": "Оценка эффективности и безопасности через 48–72 часа",
+    "category": "review",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-reassess-72h",
+      "cap-treatment-failure",
+      "cap-crp-dynamics"
+    ],
+    "requirements": [],
+    "description": "Сопоставить температуру, интоксикацию, дыхательные симптомы, СРБ и переносимость. При ухудшении повторно оценить тяжесть, осложнения и уровень помощи."
+  },
+  {
+    "id": "susceptibility_review",
+    "title": "Пересмотр лечения по результату посева",
+    "category": "review",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-culture-review",
+      "cap-culture-interpretation",
+      "cap-etiotropic"
+    ],
+    "requirements": [],
+    "description": "Использовать только реально полученный клинически значимый результат с чувствительностью. При подтверждённой устойчивости текущего препарата пересмотреть лечение; не выводить чувствительность из одного имени возбудителя."
+  },
+  {
+    "id": "oral_switch_review",
+    "title": "Проверка возможности перехода на приём внутрь",
+    "category": "review",
+    "drug_id": null,
+    "dose": null,
+    "route": null,
+    "frequency": null,
+    "evidence_ids": [
+      "cap-oral-switch-1",
+      "cap-oral-switch-2"
+    ],
+    "requirements": [],
+    "description": "Требуются ВСЕ критерии: температура <37,8 при двух измерениях через 8ч, ясное сознание, ЧДД <24, ЧСС <100, систолическое АД >90, SpO2 >90% или PaO2 >60 и отсутствие нарушений всасывания. При нехватке данных зафиксировать неопределённость; одно измерение температуры не даёт права автоматически сменить путь введения."
+  }
+]

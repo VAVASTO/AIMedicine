@@ -1,0 +1,39 @@
+[
+  {
+    "id": "drug-levo-qt",
+    "document_id": "dailymed-levofloxacin-16d51c1c",
+    "title": "Левофлоксацин: взаимодействие с антиаритмическими средствами",
+    "section": "5.11 Prolongation of the QT Interval",
+    "page": null,
+    "text": "Пересказ официальной инструкции: следует избегать левофлоксацина при удлинённом QT, некорригированной гипокалиемии и совместном применении антиаритмических средств класса IA или III, включая амиодарон и соталол. Этот фрагмент используется только для предупреждения о взаимодействии; дозировки берутся из выбранных российских КР.",
+    "tags": [
+      "levofloxacin",
+      "amiodarone",
+      "QT",
+      "лекарственное взаимодействие"
+    ],
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16d51c1c-4144-4be7-9356-98fcee621ecd",
+    "source_type": "drug_label",
+    "version": "Updated 2026-01-09",
+    "retrieved_at": "2026-09-27",
+    "quote": "Levofloxacin should be avoided [...] patients receiving Class IA (quinidine, procainamide), or Class III (amiodarone, sotalol) antiarrhythmic agents."
+  },
+  {
+    "id": "drug-levo-allergy",
+    "document_id": "dailymed-levofloxacin-16d51c1c",
+    "title": "Левофлоксацин: гиперчувствительность",
+    "section": "4 Contraindications",
+    "page": null,
+    "text": "Пересказ официальной инструкции: левофлоксацин противопоказан при известной гиперчувствительности к левофлоксацину либо другим хинолоновым антибактериальным препаратам.",
+    "tags": [
+      "levofloxacin",
+      "fluoroquinolone",
+      "allergy",
+      "аллергия"
+    ],
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=16d51c1c-4144-4be7-9356-98fcee621ecd",
+    "source_type": "drug_label",
+    "version": "Updated 2026-01-09",
+    "retrieved_at": "2026-09-27"
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "mode": "live",
+  "source_version": "654_2 / 2024",
+  "cases": [
+    {
+      "patient_id": "patient_001",
+      "path": "patient_001.json",
+      "initial_drugs": [
+        "ampicillin"
+      ],
+      "final_drugs": [
+        "ampicillin"
+      ],
+      "findings": 0,
+      "open_findings": 0,
+      "unverified_llm_findings": 0,
+      "requires_human_review": false,
+      "revision_triggered": false
+    },
+    {
+      "patient_id": "patient_002",
+      "path": "patient_002.json",
+      "initial_drugs": [
+        "levofloxacin"
+      ],
+      "final_drugs": [
+        "levofloxacin"
+      ],
+      "findings": 0,
+      "open_findings": 0,
+      "unverified_llm_findings": 2,
+      "requires_human_review": true,
+      "revision_triggered": false
+    },
+    {
+      "patient_id": "patient_003",
+      "path": "patient_003.json",
+      "initial_drugs": [
+        "ampicillin"
+      ],
+      "final_drugs": [
+        "levofloxacin"
+      ],
+      "findings": 0,
+      "open_findings": 0,
+      "unverified_llm_findings": 2,
+      "requires_human_review": true,
+      "revision_triggered": true
+    }
+  ],
+  "usage": {
+    "model": "ministral-8b-latest",
+    "api_attempts": 3,
+    "cache_hits": 7,
+    "usage": {
+      "prompt_tokens": 54646,
+      "completion_tokens": 1759,
+      "total_tokens": 56405
+    },
+    "max_calls": 5,
+    "max_output_tokens": 2400,
+    "records": [
+      {
+        "role": "planner",
+        "cache": true,
+        "request_hash": "b7b7c3452a8c7b34920b9e2a7c4ac96a05980e1f21eb696d653c822442acae5f",
+        "model": "ministral-8b-latest"
+      },
+      {
+        "role": "auditor",
+        "cache": false,
+        "request_hash": "d58c0d3a6944f70cca4d9d4e1a2e94348b8ed837ea0c3da7c733371122977fad",
+        "model": "ministral-14b-latest",
+        "usage": {
+          "prompt_tokens": 17460,
+          "total_tokens": 17786,
+          "completion_tokens": 326,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "service_tier": "standard"
+        }
+      },
+      {
+        "role": "planner",
+        "cache": true,
+        "request_hash": "cb83bb4e1e8adb580e0c1ba79aa858ce8b913c05c271a6a66cc0afeff3661d24",
+        "model": "ministral-8b-latest"
+      },
+      {
+        "role": "planner_validation_retry",
+        "cache": true,
+        "request_hash": "7b72c94557e0da7c3a757c3c0edf1a9c7c89e13104549f7d79e17635184eed23",
+        "model": "ministral-8b-latest"
+      },
+      {
+        "role": "auditor",
+        "cache": false,
+        "request_hash": "49dcc2235cddf2f970327804437efc74ecb63372ffe03e3d08a3e737d4cb6d86",
+        "model": "ministral-14b-latest",
+        "usage": {
+          "prompt_tokens": 17825,
+          "total_tokens": 18533,
+          "completion_tokens": 708,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "service_tier": "standard"
+        }
+      },
+      {
+        "role": "planner",
+        "cache": true,
+        "request_hash": "25c95fba891944f9371d5e8c632902e580a984d7792ea7959c5e4dc8e058526d",
+        "model": "ministral-8b-latest"
+      },
+      {
+        "role": "planner_validation_retry",
+        "cache": true,
+        "request_hash": "3870a934b6230a3bcf84720aad32add40d339b0f11f891da98f37f394773f610",
+        "model": "ministral-8b-latest"
+      },
+      {
+        "role": "replanner",
+        "cache": true,
+        "request_hash": "ddf31b7ae7600a32fa1a0a77cad2485b2022094e3c2663a011563c160e9ba365",
+        "model": "ministral-8b-latest"
+      },
+      {
+        "role": "replanner_validation_retry",
+        "cache": true,
+        "request_hash": "6cd8528063f290507fa8c267a63f752cd323aaa69ffcdf899a157d8ed9cead7f",
+        "model": "ministral-8b-latest"
+      },
+      {
+        "role": "auditor",
+        "cache": false,
+        "request_hash": "03911271b914d3d92e213d68017e52ff781459969fd0d247004e5de1716f1945",
+        "model": "ministral-14b-latest",
+        "usage": {
+          "prompt_tokens": 19361,
+          "total_tokens": 20086,
+          "completion_tokens": 725,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "service_tier": "standard"
+        }
+      }
+    ]
+  },
+  "note": "Синтетический учебный прототип; source edition frozen, not asserted latest."
+}

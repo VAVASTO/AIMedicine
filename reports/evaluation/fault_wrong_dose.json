@@ -1,0 +1,1094 @@
+{
+  "patient": {
+    "id": "patient_001",
+    "age": 52,
+    "sex": "male",
+    "diagnosis": "Внебольничная пневмония",
+    "severity": "nonsevere",
+    "hospitalized": true,
+    "hospitalization_reason": "Синтетический случай: госпитализация для наблюдения из-за выраженной слабости и невозможности организовать амбулаторное наблюдение.",
+    "risk_resistant_pathogens": false,
+    "allergies": [],
+    "comorbidities": [],
+    "current_medications": [],
+    "observations": [
+      {
+        "name": "temperature",
+        "value": 38.7,
+        "unit": "°C",
+        "day": 0
+      },
+      {
+        "name": "spo2",
+        "value": 94.0,
+        "unit": "%",
+        "day": 0
+      },
+      {
+        "name": "respiratory_rate",
+        "value": 24.0,
+        "unit": "/min",
+        "day": 0
+      },
+      {
+        "name": "heart_rate",
+        "value": 104.0,
+        "unit": "/min",
+        "day": 0
+      },
+      {
+        "name": "crp",
+        "value": 128.0,
+        "unit": "mg/L",
+        "day": 0
+      },
+      {
+        "name": "wbc",
+        "value": 14.1,
+        "unit": "10^9/L",
+        "day": 0
+      },
+      {
+        "name": "creatinine",
+        "value": 78.0,
+        "unit": "µmol/L",
+        "day": 0
+      },
+      {
+        "name": "egfr",
+        "value": 99.0,
+        "unit": "mL/min/1.73m²",
+        "day": 0
+      },
+      {
+        "name": "alt",
+        "value": 21.0,
+        "unit": "U/L",
+        "day": 0
+      },
+      {
+        "name": "ast",
+        "value": 23.0,
+        "unit": "U/L",
+        "day": 0
+      },
+      {
+        "name": "qtc_ms",
+        "value": 420.0,
+        "unit": "ms",
+        "day": 0
+      },
+      {
+        "name": "chest_xray_infiltrate",
+        "value": 1.0,
+        "unit": "boolean",
+        "day": 0
+      },
+      {
+        "name": "potassium",
+        "value": 4.2,
+        "unit": "mmol/L",
+        "day": 0
+      }
+    ],
+    "culture": null,
+    "consents": {},
+    "symptoms": [
+      "Кашель с мокротой",
+      "Лихорадка",
+      "Слабость"
+    ],
+    "synthetic": true
+  },
+  "plans": [
+    {
+      "version": 1,
+      "day": 0,
+      "actions": [
+        {
+          "id": "v1:cbc",
+          "catalog_id": "cbc",
+          "title": "Общий (клинический) анализ крови",
+          "category": "investigation",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Эритроциты, гематокрит, лейкоциты, тромбоциты, лейкоцитарная формула; не считать назначение полученным результатом.",
+          "evidence_ids": [
+            "cap-cbc"
+          ]
+        },
+        {
+          "id": "v1:biochemistry",
+          "catalog_id": "biochemistry",
+          "title": "Биохимический анализ крови",
+          "category": "investigation",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Мочевина, креатинин, билирубин, глюкоза, альбумин, натрий, калий, хлориды, АСТ и АЛТ. Учитывать результаты при выборе препарата и дозы.",
+          "evidence_ids": [
+            "cap-biochemistry"
+          ]
+        },
+        {
+          "id": "v1:crp",
+          "catalog_id": "crp",
+          "title": "С-реактивный белок",
+          "category": "investigation",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Исходная оценка и повторная оценка на 3–4 день; динамика СРБ рассматривается вместе с клинической картиной.",
+          "evidence_ids": [
+            "cap-crp",
+            "cap-crp-dynamics"
+          ]
+        },
+        {
+          "id": "v1:ecg",
+          "catalog_id": "ecg",
+          "title": "ЭКГ в стандартных отведениях",
+          "category": "investigation",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Для выявления осложнений, сопутствующих заболеваний и безопасного выбора антибиотика; при неизвестном QTc нельзя выдумывать нормальный результат.",
+          "evidence_ids": [
+            "cap-ecg"
+          ]
+        },
+        {
+          "id": "v1:sputum_culture",
+          "catalog_id": "sputum_culture",
+          "title": "Микроскопия и посев мокроты с чувствительностью",
+          "category": "investigation",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. При продуктивном кашле получить образец как можно раньше и до АБТ. Оценивать качество образца, микроскопию и клиническую значимость результата; не подменять назначение полученным посевом.",
+          "evidence_ids": [
+            "cap-sputum-culture",
+            "cap-sputum-before-antibiotics",
+            "cap-culture-interpretation"
+          ]
+        },
+        {
+          "id": "v1:chest_xray",
+          "catalog_id": "chest_xray",
+          "title": "Рентгенография органов грудной клетки",
+          "category": "investigation",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Для верификации диагноза, оценки распространённости и осложнений. При уже полученном подтверждающем снимке повторный снимок автоматически не назначается.",
+          "evidence_ids": [
+            "cap-chest-xray"
+          ]
+        },
+        {
+          "id": "v1:pulse_oximetry",
+          "catalog_id": "pulse_oximetry",
+          "title": "Пульсоксиметрия",
+          "category": "monitoring",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Измерить SpO2 для выявления гипоксемии; не придумывать частоту измерений, не указанную в данном фрагменте.",
+          "evidence_ids": [
+            "cap-pulse-oximetry"
+          ]
+        },
+        {
+          "id": "v1:vitals",
+          "catalog_id": "vitals",
+          "title": "Контроль жизненных показателей",
+          "category": "monitoring",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Температура, ЧДД, ЧСС и артериальное давление; оценка вместе с состоянием сознания и жалобами.",
+          "evidence_ids": [
+            "cap-vitals"
+          ]
+        },
+        {
+          "id": "v1:hydration",
+          "catalog_id": "hydration",
+          "title": "Достаточное питьё и ограничение чрезмерной нагрузки",
+          "category": "regimen",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Общая рекомендация из информации для пациента; источник не устанавливает объём жидкости. Индивидуальный объём и ограничения определяет врач с учётом состояния; внутривенные инфузии автоматически не назначаются.",
+          "evidence_ids": [
+            "cap-hydration"
+          ]
+        },
+        {
+          "id": "v1:reassess_72h",
+          "catalog_id": "reassess_72h",
+          "title": "Оценка эффективности и безопасности через 48–72 часа",
+          "category": "review",
+          "drug_id": null,
+          "dose": null,
+          "route": null,
+          "frequency": null,
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Сопоставить температуру, интоксикацию, дыхательные симптомы, СРБ и переносимость. При ухудшении повторно оценить тяжесть, осложнения и уровень помощи.",
+          "evidence_ids": [
+            "cap-reassess-72h",
+            "cap-treatment-failure",
+            "cap-crp-dynamics"
+          ]
+        },
+        {
+          "id": "v1:ampicillin_iv",
+          "catalog_id": "ampicillin_iv",
+          "title": "Ампициллин",
+          "category": "medication",
+          "drug_id": "ampicillin",
+          "dose": "999 г",
+          "route": "в/в",
+          "frequency": "каждые 6 ч",
+          "status": "active",
+          "indication": "Учитываются данные синтетического пациента и условия источника. Стартовый вариант нетяжёлой ВП без значимых сопутствующих заболеваний и факторов риска редких/полирезистентных возбудителей. Исключить немедленную аллергию на бета-лактамы. Доза из таблицы для нормальной функции печени и почек; схема не покрывает коррекцию при органной недостаточности.",
+          "evidence_ids": [
+            "cap-empiric",
+            "cap-parenteral",
+            "cap-beta-allergy",
+            "cap-dose-ampicillin",
+            "cap-dose-scope"
+          ]
+        }
+      ],
+      "rationale": "Офлайн-эталон по явным правилам; LLM не вызывалась. Выбор зависит от данных, не от идентификатора пациента.",
+      "missing_data": [],
+      "origin": "fixture"
+    }
+  ],
+  "checkpoints": [],
+  "audits": [
+    {
+      "findings": [
+        {
+          "code": "catalog_parameter_mismatch",
+          "severity": "critical",
+          "category": "citation",
+          "plan_version": 1,
+          "action_id": "v1:ampicillin_iv",
+          "message": "Параметры действия отличаются от проверенного варианта каталога.",
+          "evidence_ids": [
+            "cap-beta-allergy",
+            "cap-dose-ampicillin",
+            "cap-dose-scope",
+            "cap-empiric",
+            "cap-parenteral"
+          ],
+          "patient_evidence": "Не совпадают поля: dose: фактически '999 г'; в каталоге '2,0 г'",
+          "recommendation": "Не выводить новую дозировку из существующей ссылки; вернуть проверенный вариант или передать врачу.",
+          "origin": "rule",
+          "status": "open"
+        }
+      ],
+      "checked_rules": [
+        "citation_exists",
+        "catalog_support",
+        "catalog_fields",
+        "allergy_known",
+        "beta_lactam_allergy",
+        "fluoroquinolone_allergy",
+        "dose_scope",
+        "inpatient_scope",
+        "mdr_scope",
+        "comorbidity_scope",
+        "qt_result_available",
+        "potassium_available",
+        "qt_drug_interaction",
+        "culture_resistance_time_aware",
+        "duplicate_antibiotics",
+        "inpatient_diagnostics",
+        "procedure_consent",
+        "contrast_renal_precondition",
+        "history_resolution",
+        "antibiotic_present"
+      ],
+      "limitations": [
+        "Проверяется ограниченный каталог выбранного сценария; отсутствие находок не доказывает клиническую безопасность.",
+        "Любой непустой список сопутствующих заболеваний находится за пределами текущих демонстрационных случаев и требует ручной оценки; это не правило о противопоказании антибиотиков при любых заболеваниях.",
+        "Связь назначения с источником проверяется по вручную подтверждённому каталогу, а не универсальным доказательством логического следования текста.",
+        "Проверка доз покрывает только заранее заданные режимы. eGFR>=90 и АЛТ/АСТ<=40 — консервативные границы демонстрационного набора, не универсальные противопоказания или полная оценка функции органов.",
+        "Правило взаимодействий явно покрывает левофлоксацин+амиодарон; полной базы лекарственных взаимодействий нет.",
+        "QTc<450 и калий>=3.5 — границы синтетического входного набора; они не доказывают отсутствие риска и не являются полной клинической стратификацией.",
+        "КР, инструкция препарата и политики демонстрации имеют отдельные идентификаторы и разную область применимости.",
+        "Наблюдения датируются с точностью до дня. При наличии синтетического execution_log его sequence отражает относительный порядок забора мокроты и начала препаратов внутри дня; без журнала этот порядок неизвестен.",
+        "Наличие отдельного показателя — ограниченное свидетельство исследования; полнота всех полей анализа и качество образца здесь не валидируются.",
+        "Historical отмечает повторяющуюся проблему старой версии; resolved сохраняет исправленную историческую находку. Только open описывает текущую нерешённую проблему."
+      ],
+      "llm_reviewed": false,
+      "llm_summary": "",
+      "llm_raw_summary": "",
+      "unverified_findings": [],
+      "llm_validation": []
+    }
+  ],
+  "retrievals": [
+    {
+      "searches": [
+        {
+          "query": "Нетяжелая внебольничная пневмония госпитализированные пациенты стартовая антибактериальная терапия парентерально",
+          "hits": [
+            {
+              "id": "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3",
+              "score": 11.96496
+            },
+            {
+              "id": "ru-cap-654_2-2024:p025:2108-4644:797d49dcf6",
+              "score": 11.34779
+            },
+            {
+              "id": "ru-cap-654_2-2024:p021:0-2694:811c662184",
+              "score": 11.31092
+            }
+          ]
+        },
+        {
+          "query": "Общий клинический анализ крови биохимический креатинин С-реактивный белок госпитализированные пациенты",
+          "hits": [
+            {
+              "id": "ru-cap-654_2-2024:p014:0-3772:2de1772cc1",
+              "score": 21.71866
+            },
+            {
+              "id": "ru-cap-654_2-2024:p042:0-2465:1e0a96f285",
+              "score": 21.07327
+            },
+            {
+              "id": "ru-cap-654_2-2024:p065:0-2919:6f59368c7a",
+              "score": 19.68467
+            }
+          ]
+        },
+        {
+          "query": "Мокрота микроскопия посев чувствительность до начала антибактериальной терапии интерпретация результатов",
+          "hits": [
+            {
+              "id": "ru-cap-654_2-2024:p016:0-4195:4320e0bb09",
+              "score": 15.60371
+            },
+            {
+              "id": "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+              "score": 7.07429
+            },
+            {
+              "id": "ru-cap-654_2-2024:p035:0-4056:0c6e643d09",
+              "score": 6.96205
+            }
+          ]
+        },
+        {
+          "query": "Рентгенография органов грудной клетки пульсоксиметрия общий осмотр жизненные показатели",
+          "hits": [
+            {
+              "id": "ru-cap-654_2-2024:p013:0-3143:3cd492287a",
+              "score": 22.63882
+            },
+            {
+              "id": "ru-cap-654_2-2024:p042:0-2465:1e0a96f285",
+              "score": 22.26071
+            },
+            {
+              "id": "ru-cap-654_2-2024:p065:0-2919:6f59368c7a",
+              "score": 12.10701
+            }
+          ]
+        },
+        {
+          "query": "Электрокардиография ЭКГ интервал QT фторхинолоны нежелательные лекарственные реакции",
+          "hits": [
+            {
+              "id": "ru-cap-654_2-2024:p003:0-1749:73ac1ccced",
+              "score": 9.71688
+            },
+            {
+              "id": "ru-cap-654_2-2024:p063:0-3086:8880e573e4",
+              "score": 7.31825
+            },
+            {
+              "id": "ru-cap-654_2-2024:p018:0-3966:c09e0315a8",
+              "score": 5.93111
+            }
+          ]
+        },
+        {
+          "query": "Дозы антибактериальных препаратов нормальная функция почек печени внутривенно каждые",
+          "hits": [
+            {
+              "id": "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5",
+              "score": 24.21961
+            },
+            {
+              "id": "ru-cap-654_2-2024:p065:0-2919:6f59368c7a",
+              "score": 14.58341
+            },
+            {
+              "id": "ru-cap-654_2-2024:p009:0-4187:0802a45b45",
+              "score": 9.6377
+            }
+          ]
+        },
+        {
+          "query": "Пациенту пневмония пить достаточное количество жидкости физические нагрузки",
+          "hits": [
+            {
+              "id": "ru-cap-654_2-2024:p068:2439-4705:ebb720317e",
+              "score": 20.14462
+            },
+            {
+              "id": "ru-cap-654_2-2024:p023:0-4029:5d384f2f54",
+              "score": 10.64007
+            },
+            {
+              "id": "ru-cap-654_2-2024:p018:0-3966:c09e0315a8",
+              "score": 9.61874
+            }
+          ]
+        },
+        {
+          "query": "Оценка эффективности безопасности антибактериальной терапии через 48 72 часа СРБ неэффективность",
+          "hits": [
+            {
+              "id": "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+              "score": 16.56786
+            },
+            {
+              "id": "ru-cap-654_2-2024:p042:1892-4146:a7798ef9f0",
+              "score": 13.6409
+            },
+            {
+              "id": "ru-cap-654_2-2024:p022:0-4097:01c876882b",
+              "score": 8.74575
+            }
+          ]
+        }
+      ],
+      "search_ids": [
+        "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3",
+        "ru-cap-654_2-2024:p025:2108-4644:797d49dcf6",
+        "ru-cap-654_2-2024:p021:0-2694:811c662184",
+        "ru-cap-654_2-2024:p014:0-3772:2de1772cc1",
+        "ru-cap-654_2-2024:p042:0-2465:1e0a96f285",
+        "ru-cap-654_2-2024:p065:0-2919:6f59368c7a",
+        "ru-cap-654_2-2024:p016:0-4195:4320e0bb09",
+        "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+        "ru-cap-654_2-2024:p035:0-4056:0c6e643d09",
+        "ru-cap-654_2-2024:p013:0-3143:3cd492287a",
+        "ru-cap-654_2-2024:p003:0-1749:73ac1ccced",
+        "ru-cap-654_2-2024:p063:0-3086:8880e573e4",
+        "ru-cap-654_2-2024:p018:0-3966:c09e0315a8",
+        "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5",
+        "ru-cap-654_2-2024:p009:0-4187:0802a45b45",
+        "ru-cap-654_2-2024:p068:2439-4705:ebb720317e",
+        "ru-cap-654_2-2024:p023:0-4029:5d384f2f54",
+        "ru-cap-654_2-2024:p042:1892-4146:a7798ef9f0",
+        "ru-cap-654_2-2024:p022:0-4097:01c876882b"
+      ],
+      "expanded_ids": [
+        "ru-cap-654_2-2024:p025:0-2661:688843605a",
+        "ru-cap-654_2-2024:p026:0-4075:caa06c3d59",
+        "ru-cap-654_2-2024:p020:0-3660:782a7f9241",
+        "ru-cap-654_2-2024:p021:2262-4272:32d319cb31",
+        "ru-cap-654_2-2024:p015:0-4054:71a6225348",
+        "ru-cap-654_2-2024:p041:0-1851:cc3e4c11c2",
+        "ru-cap-654_2-2024:p066:0-1060:ec683a8da8",
+        "ru-cap-654_2-2024:p017:0-2642:17e3970067",
+        "ru-cap-654_2-2024:p027:0-4502:a4f2ff81ef",
+        "ru-cap-654_2-2024:p029:0-3728:4f7fa618b9",
+        "ru-cap-654_2-2024:p034:0-2002:284481881f",
+        "ru-cap-654_2-2024:p036:0-2824:11294208ca",
+        "ru-cap-654_2-2024:p012:0-3061:f7d816e316",
+        "ru-cap-654_2-2024:p002:0-2080:876a83a473",
+        "ru-cap-654_2-2024:p004:0-2282:7528a4b68c",
+        "ru-cap-654_2-2024:p062:0-3752:c3d496b013",
+        "ru-cap-654_2-2024:p063:2565-4648:37d09ffd3f",
+        "ru-cap-654_2-2024:p017:2085-4661:2bf531b1af",
+        "ru-cap-654_2-2024:p019:0-4458:8f446936a7",
+        "ru-cap-654_2-2024:p008:0-2827:b6b2d61e9b",
+        "ru-cap-654_2-2024:p010:0-3729:e09c5ef9c5",
+        "ru-cap-654_2-2024:p068:0-2908:a4ac004ac9",
+        "ru-cap-654_2-2024:p069:0-1090:7a2ee7d139",
+        "ru-cap-654_2-2024:p043:0-2306:fa35edce95"
+      ],
+      "retrieved_ids": [
+        "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3",
+        "ru-cap-654_2-2024:p025:2108-4644:797d49dcf6",
+        "ru-cap-654_2-2024:p021:0-2694:811c662184",
+        "ru-cap-654_2-2024:p014:0-3772:2de1772cc1",
+        "ru-cap-654_2-2024:p042:0-2465:1e0a96f285",
+        "ru-cap-654_2-2024:p065:0-2919:6f59368c7a",
+        "ru-cap-654_2-2024:p016:0-4195:4320e0bb09",
+        "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+        "ru-cap-654_2-2024:p035:0-4056:0c6e643d09",
+        "ru-cap-654_2-2024:p013:0-3143:3cd492287a",
+        "ru-cap-654_2-2024:p003:0-1749:73ac1ccced",
+        "ru-cap-654_2-2024:p063:0-3086:8880e573e4",
+        "ru-cap-654_2-2024:p018:0-3966:c09e0315a8",
+        "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5",
+        "ru-cap-654_2-2024:p009:0-4187:0802a45b45",
+        "ru-cap-654_2-2024:p068:2439-4705:ebb720317e",
+        "ru-cap-654_2-2024:p023:0-4029:5d384f2f54",
+        "ru-cap-654_2-2024:p042:1892-4146:a7798ef9f0",
+        "ru-cap-654_2-2024:p022:0-4097:01c876882b",
+        "ru-cap-654_2-2024:p025:0-2661:688843605a",
+        "ru-cap-654_2-2024:p026:0-4075:caa06c3d59",
+        "ru-cap-654_2-2024:p020:0-3660:782a7f9241",
+        "ru-cap-654_2-2024:p021:2262-4272:32d319cb31",
+        "ru-cap-654_2-2024:p015:0-4054:71a6225348",
+        "ru-cap-654_2-2024:p041:0-1851:cc3e4c11c2",
+        "ru-cap-654_2-2024:p066:0-1060:ec683a8da8",
+        "ru-cap-654_2-2024:p017:0-2642:17e3970067",
+        "ru-cap-654_2-2024:p027:0-4502:a4f2ff81ef",
+        "ru-cap-654_2-2024:p029:0-3728:4f7fa618b9",
+        "ru-cap-654_2-2024:p034:0-2002:284481881f",
+        "ru-cap-654_2-2024:p036:0-2824:11294208ca",
+        "ru-cap-654_2-2024:p012:0-3061:f7d816e316",
+        "ru-cap-654_2-2024:p002:0-2080:876a83a473",
+        "ru-cap-654_2-2024:p004:0-2282:7528a4b68c",
+        "ru-cap-654_2-2024:p062:0-3752:c3d496b013",
+        "ru-cap-654_2-2024:p063:2565-4648:37d09ffd3f",
+        "ru-cap-654_2-2024:p017:2085-4661:2bf531b1af",
+        "ru-cap-654_2-2024:p019:0-4458:8f446936a7",
+        "ru-cap-654_2-2024:p008:0-2827:b6b2d61e9b",
+        "ru-cap-654_2-2024:p010:0-3729:e09c5ef9c5",
+        "ru-cap-654_2-2024:p068:0-2908:a4ac004ac9",
+        "ru-cap-654_2-2024:p069:0-1090:7a2ee7d139",
+        "ru-cap-654_2-2024:p043:0-2306:fa35edce95"
+      ],
+      "covered_reference_ids": [
+        "cap-antibiotic-timing",
+        "cap-beta-allergy",
+        "cap-biochemistry",
+        "cap-cbc",
+        "cap-chest-xray",
+        "cap-crp",
+        "cap-crp-dynamics",
+        "cap-culture-interpretation",
+        "cap-culture-review",
+        "cap-dose-amoxiclav",
+        "cap-dose-ampicillin",
+        "cap-dose-levofloxacin",
+        "cap-dose-scope",
+        "cap-ecg",
+        "cap-empiric",
+        "cap-fluoroquinolones",
+        "cap-history",
+        "cap-hydration",
+        "cap-inpatient-table",
+        "cap-no-routine-combination",
+        "cap-oral-switch-1",
+        "cap-oral-switch-2",
+        "cap-parenteral",
+        "cap-pulse-oximetry",
+        "cap-qt",
+        "cap-reassess-72h",
+        "cap-risk-stratification",
+        "cap-sputum-before-antibiotics",
+        "cap-sputum-culture",
+        "cap-treatment-failure",
+        "cap-vitals"
+      ],
+      "reference_map": [
+        {
+          "id": "cap-antibiotic-timing",
+          "page": 24,
+          "section": "3.2.1",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3"
+          ]
+        },
+        {
+          "id": "cap-beta-allergy",
+          "page": 25,
+          "section": "3.2.1, комментарий",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p025:0-2661:688843605a"
+          ]
+        },
+        {
+          "id": "cap-biochemistry",
+          "page": 14,
+          "section": "2.3",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p014:0-3772:2de1772cc1"
+          ]
+        },
+        {
+          "id": "cap-cbc",
+          "page": 14,
+          "section": "2.3",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p014:0-3772:2de1772cc1"
+          ]
+        },
+        {
+          "id": "cap-chest-xray",
+          "page": 18,
+          "section": "2.4",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p018:0-3966:c09e0315a8"
+          ]
+        },
+        {
+          "id": "cap-crp",
+          "page": 14,
+          "section": "2.3",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p014:0-3772:2de1772cc1"
+          ]
+        },
+        {
+          "id": "cap-crp-dynamics",
+          "page": 28,
+          "section": "3.2.1, комментарий",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p028:0-4241:d7d462548a"
+          ]
+        },
+        {
+          "id": "cap-culture-interpretation",
+          "page": 16,
+          "section": "2.3.1, комментарий",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p016:0-4195:4320e0bb09"
+          ]
+        },
+        {
+          "id": "cap-culture-review",
+          "page": 28,
+          "section": "3.2.1, комментарий",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p028:0-4241:d7d462548a"
+          ]
+        },
+        {
+          "id": "cap-dose-amoxiclav",
+          "page": 64,
+          "section": "Приложение А3, режимы дозирования АМП",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5"
+          ]
+        },
+        {
+          "id": "cap-dose-ampicillin",
+          "page": 64,
+          "section": "Приложение А3, режимы дозирования АМП",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5"
+          ]
+        },
+        {
+          "id": "cap-dose-levofloxacin",
+          "page": 64,
+          "section": "Приложение А3, режимы дозирования АМП",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5"
+          ]
+        },
+        {
+          "id": "cap-dose-scope",
+          "page": 64,
+          "section": "Приложение А3, режимы дозирования АМП",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5"
+          ]
+        },
+        {
+          "id": "cap-ecg",
+          "page": 19,
+          "section": "2.4",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p019:0-4458:8f446936a7"
+          ]
+        },
+        {
+          "id": "cap-empiric",
+          "page": 24,
+          "section": "3.2.1",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3"
+          ]
+        },
+        {
+          "id": "cap-fluoroquinolones",
+          "page": 62,
+          "section": "Приложение А3, фторхинолоны",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p062:0-3752:c3d496b013"
+          ]
+        },
+        {
+          "id": "cap-history",
+          "page": 13,
+          "section": "2.1",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p013:0-3143:3cd492287a"
+          ]
+        },
+        {
+          "id": "cap-hydration",
+          "page": 68,
+          "section": "Приложение В, информация для пациентов",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p068:2439-4705:ebb720317e"
+          ]
+        },
+        {
+          "id": "cap-inpatient-table",
+          "page": 25,
+          "section": "3.2.1, таблица 8",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p025:2108-4644:797d49dcf6"
+          ]
+        },
+        {
+          "id": "cap-no-routine-combination",
+          "page": 25,
+          "section": "3.2.1, комментарий",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p025:2108-4644:797d49dcf6",
+            "ru-cap-654_2-2024:p025:0-2661:688843605a"
+          ]
+        },
+        {
+          "id": "cap-oral-switch-1",
+          "page": 28,
+          "section": "3.2.1, критерии клинической стабильности (начало)",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p028:0-4241:d7d462548a"
+          ]
+        },
+        {
+          "id": "cap-oral-switch-2",
+          "page": 29,
+          "section": "3.2.1, критерии клинической стабильности (продолжение)",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p029:0-3728:4f7fa618b9"
+          ]
+        },
+        {
+          "id": "cap-parenteral",
+          "page": 24,
+          "section": "3.2.1",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3"
+          ]
+        },
+        {
+          "id": "cap-pulse-oximetry",
+          "page": 13,
+          "section": "2.2",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p013:0-3143:3cd492287a"
+          ]
+        },
+        {
+          "id": "cap-qt",
+          "page": 63,
+          "section": "Приложение А3, препараты других групп",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p063:0-3086:8880e573e4"
+          ]
+        },
+        {
+          "id": "cap-reassess-72h",
+          "page": 28,
+          "section": "3.2.1",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p028:0-4241:d7d462548a"
+          ]
+        },
+        {
+          "id": "cap-risk-stratification",
+          "page": 24,
+          "section": "3.2.1, комментарий",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3"
+          ]
+        },
+        {
+          "id": "cap-sputum-before-antibiotics",
+          "page": 16,
+          "section": "2.3.1, комментарий",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p016:0-4195:4320e0bb09"
+          ]
+        },
+        {
+          "id": "cap-sputum-culture",
+          "page": 15,
+          "section": "2.3.1",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p015:0-4054:71a6225348"
+          ]
+        },
+        {
+          "id": "cap-treatment-failure",
+          "page": 28,
+          "section": "3.2.1, комментарий",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p028:0-4241:d7d462548a"
+          ]
+        },
+        {
+          "id": "cap-vitals",
+          "page": 13,
+          "section": "2.2",
+          "source_chunk_ids": [
+            "ru-cap-654_2-2024:p013:0-3143:3cd492287a"
+          ]
+        }
+      ],
+      "index": "full-document-bm25-v2",
+      "top_k": 3,
+      "neighbor_radius": 1,
+      "stage": "plan",
+      "day": 0,
+      "lookup_ids": [
+        "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3",
+        "ru-cap-654_2-2024:p025:2108-4644:797d49dcf6",
+        "ru-cap-654_2-2024:p021:0-2694:811c662184",
+        "ru-cap-654_2-2024:p014:0-3772:2de1772cc1",
+        "ru-cap-654_2-2024:p042:0-2465:1e0a96f285",
+        "ru-cap-654_2-2024:p065:0-2919:6f59368c7a",
+        "ru-cap-654_2-2024:p016:0-4195:4320e0bb09",
+        "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+        "ru-cap-654_2-2024:p035:0-4056:0c6e643d09",
+        "ru-cap-654_2-2024:p013:0-3143:3cd492287a",
+        "ru-cap-654_2-2024:p003:0-1749:73ac1ccced",
+        "ru-cap-654_2-2024:p063:0-3086:8880e573e4",
+        "ru-cap-654_2-2024:p018:0-3966:c09e0315a8",
+        "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5",
+        "ru-cap-654_2-2024:p009:0-4187:0802a45b45",
+        "ru-cap-654_2-2024:p068:2439-4705:ebb720317e",
+        "ru-cap-654_2-2024:p023:0-4029:5d384f2f54",
+        "ru-cap-654_2-2024:p042:1892-4146:a7798ef9f0",
+        "ru-cap-654_2-2024:p022:0-4097:01c876882b",
+        "ru-cap-654_2-2024:p025:0-2661:688843605a",
+        "ru-cap-654_2-2024:p026:0-4075:caa06c3d59",
+        "ru-cap-654_2-2024:p020:0-3660:782a7f9241",
+        "ru-cap-654_2-2024:p021:2262-4272:32d319cb31",
+        "ru-cap-654_2-2024:p015:0-4054:71a6225348",
+        "ru-cap-654_2-2024:p041:0-1851:cc3e4c11c2",
+        "ru-cap-654_2-2024:p066:0-1060:ec683a8da8",
+        "ru-cap-654_2-2024:p017:0-2642:17e3970067",
+        "ru-cap-654_2-2024:p027:0-4502:a4f2ff81ef",
+        "ru-cap-654_2-2024:p029:0-3728:4f7fa618b9",
+        "ru-cap-654_2-2024:p034:0-2002:284481881f",
+        "ru-cap-654_2-2024:p036:0-2824:11294208ca",
+        "ru-cap-654_2-2024:p012:0-3061:f7d816e316",
+        "ru-cap-654_2-2024:p002:0-2080:876a83a473",
+        "ru-cap-654_2-2024:p004:0-2282:7528a4b68c",
+        "ru-cap-654_2-2024:p062:0-3752:c3d496b013",
+        "ru-cap-654_2-2024:p063:2565-4648:37d09ffd3f",
+        "ru-cap-654_2-2024:p017:2085-4661:2bf531b1af",
+        "ru-cap-654_2-2024:p019:0-4458:8f446936a7",
+        "ru-cap-654_2-2024:p008:0-2827:b6b2d61e9b",
+        "ru-cap-654_2-2024:p010:0-3729:e09c5ef9c5",
+        "ru-cap-654_2-2024:p068:0-2908:a4ac004ac9",
+        "ru-cap-654_2-2024:p069:0-1090:7a2ee7d139",
+        "ru-cap-654_2-2024:p043:0-2306:fa35edce95",
+        "cap-antibiotic-timing",
+        "cap-beta-allergy",
+        "cap-biochemistry",
+        "cap-cbc",
+        "cap-chest-xray",
+        "cap-crp",
+        "cap-crp-dynamics",
+        "cap-culture-interpretation",
+        "cap-culture-review",
+        "cap-dose-amoxiclav",
+        "cap-dose-ampicillin",
+        "cap-dose-levofloxacin",
+        "cap-dose-scope",
+        "cap-ecg",
+        "cap-empiric",
+        "cap-fluoroquinolones",
+        "cap-history",
+        "cap-hydration",
+        "cap-inpatient-table",
+        "cap-no-routine-combination",
+        "cap-oral-switch-1",
+        "cap-oral-switch-2",
+        "cap-parenteral",
+        "cap-pulse-oximetry",
+        "cap-qt",
+        "cap-reassess-72h",
+        "cap-risk-stratification",
+        "cap-sputum-before-antibiotics",
+        "cap-sputum-culture",
+        "cap-treatment-failure",
+        "cap-vitals"
+      ],
+      "available_action_ids": [
+        "ampicillin_iv",
+        "amoxiclav_iv",
+        "levofloxacin_iv",
+        "cbc",
+        "biochemistry",
+        "crp",
+        "ecg",
+        "sputum_culture",
+        "chest_xray",
+        "pulse_oximetry",
+        "vitals",
+        "hydration",
+        "reassess_72h"
+      ],
+      "unavailable_actions": [],
+      "fixture_evidence_ids": [
+        "cap-empiric",
+        "cap-parenteral",
+        "cap-beta-allergy",
+        "cap-dose-ampicillin",
+        "cap-dose-scope",
+        "cap-dose-amoxiclav",
+        "cap-inpatient-table",
+        "cap-fluoroquinolones",
+        "cap-ecg",
+        "cap-qt",
+        "cap-dose-levofloxacin",
+        "cap-cbc",
+        "cap-biochemistry",
+        "cap-crp",
+        "cap-crp-dynamics",
+        "cap-sputum-culture",
+        "cap-sputum-before-antibiotics",
+        "cap-culture-interpretation",
+        "cap-chest-xray",
+        "cap-pulse-oximetry",
+        "cap-vitals",
+        "cap-hydration",
+        "cap-reassess-72h",
+        "cap-treatment-failure",
+        "cap-culture-review",
+        "cap-etiotropic",
+        "cap-oral-switch-1",
+        "cap-oral-switch-2"
+      ],
+      "selected_evidence": {
+        "cbc": [
+          "cap-cbc"
+        ],
+        "biochemistry": [
+          "cap-biochemistry"
+        ],
+        "crp": [
+          "cap-crp",
+          "cap-crp-dynamics"
+        ],
+        "ecg": [
+          "cap-ecg"
+        ],
+        "sputum_culture": [
+          "cap-sputum-culture",
+          "cap-sputum-before-antibiotics",
+          "cap-culture-interpretation"
+        ],
+        "chest_xray": [
+          "cap-chest-xray"
+        ],
+        "pulse_oximetry": [
+          "cap-pulse-oximetry"
+        ],
+        "vitals": [
+          "cap-vitals"
+        ],
+        "hydration": [
+          "cap-hydration"
+        ],
+        "reassess_72h": [
+          "cap-reassess-72h",
+          "cap-treatment-failure",
+          "cap-crp-dynamics"
+        ],
+        "ampicillin_iv": [
+          "cap-empiric",
+          "cap-parenteral",
+          "cap-beta-allergy",
+          "cap-dose-ampicillin",
+          "cap-dose-scope"
+        ]
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "stage": "initial_plan",
+      "day": 0,
+      "version": 1
+    },
+    {
+      "stage": "checkpoint",
+      "day": 3,
+      "events": []
+    },
+    {
+      "stage": "continue",
+      "day": 3,
+      "diff": {
+        "removed": [],
+        "added": [],
+        "changed": [],
+        "continued": [
+          "ampicillin_iv",
+          "biochemistry",
+          "cbc",
+          "chest_xray",
+          "crp",
+          "ecg",
+          "hydration",
+          "pulse_oximetry",
+          "reassess_72h",
+          "sputum_culture",
+          "vitals"
+        ]
+      }
+    },
+    {
+      "stage": "final_audit",
+      "day": 3,
+      "open_findings": 0
+    }
+  ],
+  "mode": "offline",
+  "run_id": "366cbf9b-3642-4835-8bdb-4c2daea8f38d",
+  "metadata": {
+    "created_at": "2026-09-27T15:50:58.203923+00:00",
+    "guideline_version": "654_2 / 2024",
+    "synthetic": true,
+    "scenario_label": "",
+    "prompt_version": "2",
+    "simulation_not_clinically_validated": true,
+    "requires_human_review": false,
+    "fault_injection": true,
+    "base_plan_origin": "offline_reference_policy"
+  }
+}

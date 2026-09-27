@@ -1,0 +1,345 @@
+{
+  "mode": "offline",
+  "fault_injection": true,
+  "note": "Базовые планы для мутаций — явно обозначенные офлайн-эталоны. LLM-аудит выполняется независимо в live-примерах дозы и процедурных условий. Это малый демонстрационный набор, не оценка клинической надежности.",
+  "rule_detection": {
+    "detected": 9,
+    "total": 9,
+    "cases": [
+      {
+        "id": "wrong_dose",
+        "expected": "catalog_parameter_mismatch",
+        "detected": true,
+        "found_codes": [
+          "catalog_parameter_mismatch"
+        ]
+      },
+      {
+        "id": "irrelevant_citation",
+        "expected": "citation_support_incomplete",
+        "detected": true,
+        "found_codes": [
+          "citation_support_incomplete",
+          "citation_unrelated"
+        ]
+      },
+      {
+        "id": "invented_citation",
+        "expected": "citation_missing",
+        "detected": true,
+        "found_codes": [
+          "citation_missing",
+          "citation_support_incomplete",
+          "citation_unrelated"
+        ]
+      },
+      {
+        "id": "ignored_allergy",
+        "expected": "beta_lactam_allergy",
+        "detected": true,
+        "found_codes": [
+          "beta_lactam_allergy"
+        ]
+      },
+      {
+        "id": "drug_interaction",
+        "expected": "levofloxacin_amiodarone",
+        "detected": true,
+        "found_codes": [
+          "levofloxacin_amiodarone"
+        ]
+      },
+      {
+        "id": "ordered_ecg_without_result",
+        "expected": "qtc_unknown",
+        "detected": true,
+        "found_codes": [
+          "qtc_unknown"
+        ]
+      },
+      {
+        "id": "ignored_resistance",
+        "expected": "known_culture_resistance",
+        "detected": true,
+        "found_codes": [
+          "known_culture_resistance"
+        ]
+      },
+      {
+        "id": "procedure_without_renal_result",
+        "expected": "contrast_renal_precondition_missing",
+        "detected": true,
+        "found_codes": [
+          "action_outside_catalog",
+          "renal_data_missing",
+          "procedure_consent_missing",
+          "contrast_renal_precondition_missing"
+        ]
+      },
+      {
+        "id": "procedure_without_consent",
+        "expected": "procedure_consent_missing",
+        "detected": true,
+        "found_codes": [
+          "action_outside_catalog",
+          "renal_data_missing",
+          "procedure_consent_missing",
+          "contrast_renal_precondition_missing"
+        ]
+      }
+    ],
+    "evaluator": "deterministic_rules",
+    "llm_evaluated": false
+  },
+  "clean_controls": [
+    {
+      "id": "patient_001",
+      "open_findings": 0
+    },
+    {
+      "id": "patient_002",
+      "open_findings": 0
+    },
+    {
+      "id": "patient_003",
+      "open_findings": 0
+    }
+  ],
+  "llm_example": null,
+  "llm_procedural_example": null,
+  "retrieval": {
+    "queries": 10,
+    "reference_recall_at_5": 0.85,
+    "reference_hit_at_5": 0.9,
+    "mean_recall_at_5": 0.85,
+    "hit_at_5": 0.9,
+    "note": "Покрытие эталонных фрагментов текстом только top-5 найденных чанков, без соседей. mean_recall_at_5 и hit_at_5 — совместимые псевдонимы reference-метрик; это не recall идентификаторов автоматического индекса.",
+    "results": [
+      {
+        "query": "Какой стартовый антибиотик рекомендован при нетяжёлой внебольничной пневмонии в стационаре без значимых сопутствующих заболеваний?",
+        "expected_ids": [
+          "cap-empiric",
+          "cap-inpatient-table"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p024:0-4026:4e71fb2da3",
+          "ru-cap-654_2-2024:p066:0-1060:ec683a8da8",
+          "ru-cap-654_2-2024:p025:2108-4644:797d49dcf6",
+          "demo-policy-comorbidity-scope",
+          "ru-cap-654_2-2024:p022:0-4097:01c876882b"
+        ],
+        "covered_reference_ids": [
+          "cap-antibiotic-timing",
+          "cap-empiric",
+          "cap-inpatient-table",
+          "cap-no-routine-combination",
+          "cap-parenteral",
+          "cap-risk-stratification"
+        ],
+        "reference_recall_at_5": 1.0,
+        "reference_hit_at_5": true
+      },
+      {
+        "query": "Чем заменить пенициллины при аллергической реакции немедленного типа на бета-лактамные антибиотики?",
+        "expected_ids": [
+          "cap-beta-allergy"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p025:0-2661:688843605a",
+          "ru-cap-654_2-2024:p021:2262-4272:32d319cb31",
+          "ru-cap-654_2-2024:p062:0-3752:c3d496b013",
+          "ru-cap-654_2-2024:p061:0-2459:45901d1689",
+          "ru-cap-654_2-2024:p027:0-4502:a4f2ff81ef"
+        ],
+        "covered_reference_ids": [
+          "cap-beta-allergy",
+          "cap-fluoroquinolones",
+          "cap-no-routine-combination"
+        ],
+        "reference_recall_at_5": 1.0,
+        "reference_hit_at_5": true
+      },
+      {
+        "query": "Какая доза и кратность внутривенного левофлоксацина указана в рекомендациях?",
+        "expected_ids": [
+          "cap-dose-levofloxacin"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p021:2262-4272:32d319cb31",
+          "drug-levo-allergy",
+          "ru-cap-654_2-2024:p030:0-2627:c050a56cc0",
+          "drug-levo-qt",
+          "ru-cap-654_2-2024:p064:0-2672:6c081e3cc5"
+        ],
+        "covered_reference_ids": [
+          "cap-dose-amoxiclav",
+          "cap-dose-ampicillin",
+          "cap-dose-levofloxacin",
+          "cap-dose-scope"
+        ],
+        "reference_recall_at_5": 1.0,
+        "reference_hit_at_5": true
+      },
+      {
+        "query": "Какие биохимические показатели крови, функции почек и печени нужно исследовать госпитализированному пациенту?",
+        "expected_ids": [
+          "cap-biochemistry"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p042:0-2465:1e0a96f285",
+          "demo-policy-renal-contrast",
+          "ru-cap-654_2-2024:p065:0-2919:6f59368c7a",
+          "ru-cap-654_2-2024:p014:0-3772:2de1772cc1",
+          "ru-cap-654_2-2024:p013:0-3143:3cd492287a"
+        ],
+        "covered_reference_ids": [
+          "cap-biochemistry",
+          "cap-cbc",
+          "cap-crp",
+          "cap-history",
+          "cap-pulse-oximetry",
+          "cap-vitals"
+        ],
+        "reference_recall_at_5": 1.0,
+        "reference_hit_at_5": true
+      },
+      {
+        "query": "Когда следует получить мокроту для посева относительно начала антибактериальной терапии?",
+        "expected_ids": [
+          "cap-sputum-before-antibiotics"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+          "ru-cap-654_2-2024:p029:0-3728:4f7fa618b9",
+          "ru-cap-654_2-2024:p023:0-4029:5d384f2f54",
+          "ru-cap-654_2-2024:p063:0-3086:8880e573e4",
+          "ru-cap-654_2-2024:p022:0-4097:01c876882b"
+        ],
+        "covered_reference_ids": [
+          "cap-crp-dynamics",
+          "cap-culture-review",
+          "cap-oral-switch-1",
+          "cap-oral-switch-2",
+          "cap-qt",
+          "cap-reassess-72h",
+          "cap-treatment-failure"
+        ],
+        "reference_recall_at_5": 0.0,
+        "reference_hit_at_5": false
+      },
+      {
+        "query": "Для чего госпитализированному пациенту с пневмонией делать ЭКГ и оценивать интервал QT?",
+        "expected_ids": [
+          "cap-ecg"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p019:0-4458:8f446936a7",
+          "ru-cap-654_2-2024:p038:0-2557:4b7dbf1473",
+          "ru-cap-654_2-2024:p063:0-3086:8880e573e4",
+          "ru-cap-654_2-2024:p038:2087-4358:59092084cc",
+          "ru-cap-654_2-2024:p042:1892-4146:a7798ef9f0"
+        ],
+        "covered_reference_ids": [
+          "cap-ecg",
+          "cap-qt"
+        ],
+        "reference_recall_at_5": 1.0,
+        "reference_hit_at_5": true
+      },
+      {
+        "query": "Как оценивать эффективность и безопасность стартовой антибиотикотерапии через 48–72 часа?",
+        "expected_ids": [
+          "cap-reassess-72h"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p042:1892-4146:a7798ef9f0",
+          "ru-cap-654_2-2024:p022:0-4097:01c876882b",
+          "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+          "ru-cap-654_2-2024:p029:0-3728:4f7fa618b9",
+          "ru-cap-654_2-2024:p026:0-4075:caa06c3d59"
+        ],
+        "covered_reference_ids": [
+          "cap-crp-dynamics",
+          "cap-culture-review",
+          "cap-oral-switch-1",
+          "cap-oral-switch-2",
+          "cap-reassess-72h",
+          "cap-treatment-failure"
+        ],
+        "reference_recall_at_5": 1.0,
+        "reference_hit_at_5": true
+      },
+      {
+        "query": "Как использовать результаты микробиологических исследований для пересмотра лечения при его неэффективности?",
+        "expected_ids": [
+          "cap-culture-review",
+          "cap-etiotropic"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+          "ru-cap-654_2-2024:p016:0-4195:4320e0bb09",
+          "ru-cap-654_2-2024:p040:0-3542:9cc6025258",
+          "ru-cap-654_2-2024:p022:0-4097:01c876882b",
+          "ru-cap-654_2-2024:p060:0-3794:8f859f250a"
+        ],
+        "covered_reference_ids": [
+          "cap-crp-dynamics",
+          "cap-culture-interpretation",
+          "cap-culture-review",
+          "cap-oral-switch-1",
+          "cap-reassess-72h",
+          "cap-sputum-before-antibiotics",
+          "cap-treatment-failure"
+        ],
+        "reference_recall_at_5": 0.5,
+        "reference_hit_at_5": true
+      },
+      {
+        "query": "Какие критерии клинической стабильности должны присутствовать для перевода антибиотика с парентерального на пероральный приём?",
+        "expected_ids": [
+          "cap-oral-switch-1",
+          "cap-oral-switch-2"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p028:0-4241:d7d462548a",
+          "ru-cap-654_2-2024:p066:0-1060:ec683a8da8",
+          "ru-cap-654_2-2024:p043:0-2306:fa35edce95",
+          "ru-cap-654_2-2024:p029:0-3728:4f7fa618b9",
+          "ru-cap-654_2-2024:p039:0-3394:a8dbc6b9c8"
+        ],
+        "covered_reference_ids": [
+          "cap-crp-dynamics",
+          "cap-culture-review",
+          "cap-oral-switch-1",
+          "cap-oral-switch-2",
+          "cap-reassess-72h",
+          "cap-treatment-failure"
+        ],
+        "reference_recall_at_5": 1.0,
+        "reference_hit_at_5": true
+      },
+      {
+        "query": "Какие рекомендации даны пациенту с пневмонией по жидкости и физической нагрузке?",
+        "expected_ids": [
+          "cap-hydration"
+        ],
+        "actual_ids": [
+          "ru-cap-654_2-2024:p068:2439-4705:ebb720317e",
+          "ru-cap-654_2-2024:p036:0-2824:11294208ca",
+          "ru-cap-654_2-2024:p023:0-4029:5d384f2f54",
+          "ru-cap-654_2-2024:p043:0-2306:fa35edce95",
+          "ru-cap-654_2-2024:p018:0-3966:c09e0315a8"
+        ],
+        "covered_reference_ids": [
+          "cap-chest-xray",
+          "cap-hydration"
+        ],
+        "reference_recall_at_5": 1.0,
+        "reference_hit_at_5": true
+      }
+    ]
+  },
+  "usage": {
+    "api_attempts": 0
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "document_id": "ru-cap-654_2-2024",
+  "version": "2024",
+  "origin": "automatic",
+  "source_pdf_sha256": "281a08c3b34c5f3b120bacd7e5fabc9ed42d8ac101efcfb26446cfafa45d5e78",
+  "extracted_pages_sha256": "6964cada3a518ce43d39766c4821dc839119801fe10ef6ad48acab146a035607",
+  "document_chunks_sha256": "b883753b4409725f3307fabc5056ddf5a0468b07a91ce0b401b7823267177b6d",
+  "parameters": {
+    "target_words": 350,
+    "max_words": 500,
+    "overlap_words": 60
+  },
+  "page_count": 73,
+  "chunk_count": 100,
+  "text_page_count": 71,
+  "pages_without_extractable_text": [
+    72,
+    73
+  ],
+  "blank_pdf_pages": [
+    72,
+    73
+  ],
+  "pages_requiring_ocr": [],
+  "pages_with_images": [
+    7,
+    34,
+    41,
+    66,
+    67,
+    69,
+    71
+  ],
+  "covered_reference_ids": [
+    "cap-amoxiclav-haemophilus",
+    "cap-antibiotic-timing",
+    "cap-beta-allergy",
+    "cap-biochemistry",
+    "cap-cbc",
+    "cap-chest-xray",
+    "cap-crp",
+    "cap-crp-dynamics",
+    "cap-culture-interpretation",
+    "cap-culture-review",
+    "cap-dose-amoxiclav",
+    "cap-dose-ampicillin",
+    "cap-dose-levofloxacin",
+    "cap-dose-scope",
+    "cap-ecg",
+    "cap-empiric",
+    "cap-etiotropic",
+    "cap-fluoroquinolones",
+    "cap-history",
+    "cap-hydration",
+    "cap-inpatient-table",
+    "cap-no-routine-combination",
+    "cap-oral-switch-1",
+    "cap-oral-switch-2",
+    "cap-parenteral",
+    "cap-pulse-oximetry",
+    "cap-qt",
+    "cap-reassess-72h",
+    "cap-risk-stratification",
+    "cap-sputum-before-antibiotics",
+    "cap-sputum-culture",
+    "cap-treatment-failure",
+    "cap-vitals"
+  ],
+  "offset_unit": "Unicode code points; half-open intervals within physical PDF page",
+  "coverage": "All extracted characters; images have not been OCR-transcribed",
+  "limitations": [
+    "Текст внутри растровых схем отдельно не распознаётся."
+  ]
+}

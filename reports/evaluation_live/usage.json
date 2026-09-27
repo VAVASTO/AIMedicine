@@ -1,0 +1,59 @@
+{
+  "model": "ministral-8b-latest",
+  "api_attempts": 3,
+  "cache_hits": 0,
+  "usage": {
+    "prompt_tokens": 48676,
+    "completion_tokens": 1511,
+    "total_tokens": 50187
+  },
+  "max_calls": 4,
+  "max_output_tokens": 2400,
+  "records": [
+    {
+      "role": "auditor",
+      "cache": false,
+      "request_hash": "551941c35a4c0441b2ad4c7b075fd6e82a82a2a8f7b6926d00d2d5cc36c726cc",
+      "model": "ministral-14b-latest",
+      "usage": {
+        "prompt_tokens": 15751,
+        "total_tokens": 16192,
+        "completion_tokens": 441,
+        "prompt_tokens_details": {
+          "cached_tokens": 554
+        },
+        "service_tier": "standard"
+      }
+    },
+    {
+      "role": "auditor",
+      "cache": false,
+      "request_hash": "6599acad081e034a9cf61d3a81130abb7eee102e2ba8e8358fdb31e735381a56",
+      "model": "ministral-14b-latest",
+      "usage": {
+        "prompt_tokens": 17192,
+        "total_tokens": 17599,
+        "completion_tokens": 407,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      }
+    },
+    {
+      "role": "auditor",
+      "cache": false,
+      "request_hash": "ea0d1bf596bcb5363e5da49f2f223e8ff87d446d470dfc3afcba0b5f02537550",
+      "model": "ministral-14b-latest",
+      "usage": {
+        "prompt_tokens": 15733,
+        "total_tokens": 16396,
+        "completion_tokens": 663,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      }
+    }
+  ]
+}

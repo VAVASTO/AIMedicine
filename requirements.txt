@@ -1,0 +1,12 @@
+pydantic>=2.10,<3
+langgraph>=1.0,<2
+httpx>=0.28,<1
+python-dotenv>=1.0,<2
+rank-bm25==0.2.2
+pypdf>=5,<7
+pytest>=8,<9
+streamlit>=1.45,<2
+pandas>=2.2,<3
+nbformat>=5.10,<6
+nbclient>=0.10,<1
+ipykernel>=6.29,<7

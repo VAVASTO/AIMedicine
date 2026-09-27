@@ -1,0 +1,11 @@
+[project]
+name = "aimedicine"
+version = "0.1.0"
+description = "Traceable synthetic inpatient CDS, simulation and independent audit"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+junit_family = "legacy"
